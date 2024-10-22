@@ -2,32 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>神奈工 校内マップ</title>
+    <title>神工祭 2024</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/leaflet.css">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/leaflet.js"></script>
     <script type="text/javascript" src="js/imgViewer2.js"></script>
     <script>
-        $(function(){
-            $('#selectFloor').change(function(){
-                var val = $(this).val();
-                var selectFloorId = '#' + val;
-                $('ul li').hide();
-                $(selectFloorId).show();
-                var $img = $(selectFloorId+"_img").imgViewer2(
-                    {
-                        onReady: function(){
-                            this.setZoom(2);
-                            this.setZoom(1);
-                        }
-                    }
-                );
-            });
-        });
         ;(function($){
             $(window).on("load", function(){
                 var $img = $("#1f_img").imgViewer2(
@@ -42,9 +24,10 @@
         })(jQuery);
     </script>
 </head>
-<body class="fl" id="top">
+<body class="fl">
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
     <header>
-        <h2>神奈川工業高校 校内マップ</h2>
+        <h2>神奈川工業高校 神工祭 2024</h2>
     </header>
     <main>
         <div class="tablike">
@@ -55,7 +38,7 @@
             <select id="selectFloor">
                 <option value="0F"hidden>階を選択</option>
                 <option value="kouen">公演団体</option>
-                <option value="inshoku">飲食団体</option>
+                <option value="okugai">屋外団体</option>
                 <option value="1F">1階</option>
                 <option value="2F">2階</option>
                 <option value="3F">3階</option>
@@ -69,21 +52,250 @@
             </select>
         </div>
         <div class="text">
-            <a><br>　</a>
-            <a href="#kouen">▽公演団体</a><a><br>　</a>
-            <a href="#inshoku">▽飲食団体</a><a><br>　</a>
-            <a href="#1F">▽1階</a><a><br>　</a>
-            <a href="#2F">▽2階</a><a><br>　</a>
-            <a href="#3F">▽3階</a><a><br>　</a>
-            <a href="#4F">▽4階</a><a><br>　</a>
-            <a href="#5F">▽5階</a><a><br>　</a>
-            <a href="#6F">▽6階</a><a><br>　</a>
-            <a href="#7F">▽7階</a><a><br>　</a>
-            <a href="#8F">▽8階</a><a><br>　</a>
-            <a href="#9F">▽9階</a><a><br>　</a>
-            <a href="#10F">▽10階</a>
-            <br><br>
-            <img id="kouen">
+            <a href="#kouen">▽公演団体<br></a>
+            <a href="#okugai">▽屋外団体<br></a>
+            <a href="#1F">▽１階<br></a>
+            <a href="#2F">▽２階<br></a>
+            <a href="#3F">▽３階<br></a>
+            <a href="#4F">▽４階<br></a>
+            <a href="#5F">▽５階<br></a>
+            <a href="#6F">▽６階<br></a>
+            <a href="#7F">▽７階<br></a>
+            <a href="#8F">▽８階<br></a>
+            <a href="#9F">▽９階<br></a>
+            <a href="#10F">▽１０階</a>
+            <br>
+            <div id="kouen">
+                <h2>公演団体</h2>
+                <p class="imagep">
+                    神工祭コスプレショー 2024
+                    <br><img class="images" src="images/01-01.png"><br><br>
+                    フリーカラオケ
+                    <br><img class="images" src="images/01-02.png"><br><br>
+                    DJ部
+                    <br><img class="images" src="images/01-03.jpg"><br><br>
+                    工業戦隊メガボルト
+                    <br><img class="images" src="images/01-04.png"><br><br>
+                    カラオケ大会
+                    <br><img class="images" src="images/01-05.png"><br><br>
+                    クラス対抗MTK
+                    <br><img class="images" src="images/01-06.png"><br><br>
+                    マレーシアフェア
+                    <br><img class="images" src="images/01-07.png"><br><br>
+                    吹奏楽部 吹奏楽部ステージ
+                    <br><img class="images" src="images/01-09.png"><br><br>
+                    ダンス部 ダンス公演
+                    <br><img class="images" src="images/01-10.png"><br><br>
+                    有志団体 マツケンサンバ2
+                    <br><img class="images" src="images/01-11.png"><br><br>
+                    有志団体 一人でオドループ
+                    <br><img class="images" src="images/01-12.png"><br><br>
+                    音楽部 演奏
+                    <br><img class="images" src="images/01-13.png"><br><br>
+                </p>
+            </div>
+            <div id="okugai">
+                <h2>屋外団体</h2>
+                <p class="imagep">
+                    ローゼンボアパン
+                    <br><img class="images" src="images/02-01.png"><br><br>
+                    定時制4年生 はしびろこう
+                    <br><img class="images" src="images/02-02.png"><br><br>
+                    PTA 焼きナポリタン
+                    <br><img class="images" src="images/02-03.png"><br><br>
+                    A31 回転シーソー&うどん
+                    <br><img class="images" src="images/02-04.png"><br><br>
+                    A32 じゃがバタ　わたあめ
+                    <br><img class="images" src="images/02-05.jpg"><br><br>
+                    M31 焼きそば
+                    <br><img class="images" src="images/02-06.jpg"><br><br>
+                    E32 飲食
+                    <br><img class="images" src="images/02-07.png"><br><br>
+                    M32 ポップコーン　ホットドック　フランクフルト
+                    <br><img class="images" src="images/02-08.png"><br><br>
+                    E33 必食！マレーシア料理ミーゴレン
+                    <br><img class="images" src="images/02-09.png"><br><br>
+                    E31 かつやのやきとり
+                    <br><img class="images" src="images/02-10.png"><br><br>
+                    A31 回転シーソー
+                    <br><img class="images" src="images/02-11.png"><br><br>
+                    A32 芝生スライダー
+                    <br><img class="images" src="images/02-12.jpg"><br><br>
+                    A21 メリーゴーランド
+                    <br><img class="images" src="images/02-13.png"><br><br>
+                </p>
+            </div>
+            <div id="1F">
+                <h2>１階</h2>
+                <p class="imagep">
+                    生徒会本部 スタンプラリー
+                    <br><img class="images" src="images/03-01.bmp"><br><br>
+                    PTA 陶芸教室作品展・ハンドメイド販売
+                    <br><img class="images" src="images/03-02.jpg"><br><br>
+                    たたら製鉄
+                    <br><img class="images" src="images/03-03.jpg"><br><br>
+                    E33 メガボルトSHOP
+                    <br><img class="images" src="images/03-04.png"><br><br>
+                    保健委員会 体力王への道～体力王に俺はなる～
+                    <br><img class="images" src="images/03-05.png"><br><br>
+                </p>
+            </div>
+            <div id="2F">
+                <h2>２階</h2>
+                <p class="imagep">
+                    体育館は<a href="#kouen">△公演団体</a>へ<br><br>
+                    E33 VR/AI体験
+                    <br><img class="images" src="images/04-01.png"><br><br>
+                </p>
+            </div>
+            <div id="3F">
+                <h2>３階</h2>
+                <p class="imagep">
+                    ものづくり研究部 作品展示・販売＆コマ体験
+                    <br><img class="images" src="images/05-01.png"><br><br>
+                    水球部 水球部招待試合
+                    <br><img class="images" src="images/05-02.png"><br><br>
+                    ロボティクス部 レゴを用いたロボット製作体験
+                    <br><img class="images" src="images/05-03.png"><br><br>
+                    図書委員会 和綴じ本販売と古本市
+                    <br><img class="images" src="images/05-04.png"><br><br>
+                </p>
+            </div>
+            <div id="4F">
+                <h2>４階</h2>
+                <p class="imagep">
+                    M22 喫茶店＆フォトスポット
+                    <br><img class="images" src="images/06-01.png"><br><br>
+                    M21 ゲームパーク
+                    <br><img class="images" src="images/06-02.png"><br><br>
+                    M32 フォトスポット
+                    <br><img class="images" src="images/06-03.png"><br><br>
+                    M31 ドライビングシュミレーター
+                    <br><img class="images" src="images/06-04.jpg"><br><br>
+                    機械科展 ネームプレートと文策の販売、展示等
+                    <br><img class="images" src="images/06-05.png"><br><br>
+                </p>
+            </div>
+            <div id="5F">
+                <h2>５階</h2>
+                <p class="imagep">
+                    定時制PTA
+                    <br><img class="images" src="images/07-01.png"><br><br>
+                    定時制2年生
+                    <br><img class="images" src="images/07-02.png"><br><br>
+                    定時制1年生
+                    <br><img class="images" src="images/07-03.png"><br><br>
+                    定時制写真部・イラスト同好会
+                    <br><img class="images" src="images/07-04.png"><br><br>
+                    定時制3年生
+                    <br><img class="images" src="images/07-05.png"><br><br>
+                    定時制ライフル射撃部
+                    <br><img class="images" src="images/07-06.png"><br><br>
+                    定時制建築研究部
+                    <br><img class="images" src="images/07-07.png"><br><br>
+                    定時制機械科・建設科・電気科展
+                    <br><img class="images" src="images/07-08.png"><br><br>
+                </p>
+            </div>
+            <div id="6F">
+                <h2>６階</h2>
+                <p class="imagep">
+                    料理部 にぎりん喫茶
+                    <br><img class="images" src="images/08-01.jpg"><br><br>
+                    E13 映画上映　飲食販売
+                    <br><img class="images" src="images/08-02.png"><br><br>
+                    E12 昔のゲーム
+                    <br><img class="images" src="images/08-03.png"><br><br>
+                    E11 縁日
+                    <br><img class="images" src="images/08-04.png"><br><br>
+                    二渓会 大木理人アート展
+                    <br><img class="images" src="images/08-05.png"><br><br>
+                    生徒会本部 Kスポーツ大会
+                    <br><img class="images" src="images/08-06.bmp"><br><br>
+                    陶芸部 作品展示
+                    <br><img class="images" src="images/08-07.png"><br><br>
+                </p>
+            </div>
+            <div id="7F">
+                <h2>７階</h2>
+                <p class="imagep">
+                    A22 ジェットコースター
+                    <br><img class="images" src="images/09-01.png"><br><br>
+                    M12 射的
+                    <br><img class="images" src="images/09-02.png"><br><br>
+                    A12 迷路体験
+                    <br><img class="images" src="images/09-03.jpg"><br><br>
+                    A11 HIRANO STORY MANIA
+                    <br><img class="images" src="images/09-04.png"><br><br>
+                    建設科展
+                    <br><img class="images" src="images/09-05.png"><br><br>
+                </p>
+            </div>
+            <div id="8F">
+                <h2>８階</h2>
+                <p class="imagep">
+                    D2 Pontis Liber
+                    <br><img class="images" src="images/10-01.jpg"><br><br>
+                    D3 デカDeカフェ
+                    <br><img class="images" src="images/10-02.png"><br><br>
+                    イラスト・漫画同好会 部誌配布・グッズ販売
+                    <br><img class="images" src="images/10-03.png"><br><br>
+                    美術部 校内販売
+                    <br><img class="images" src="images/10-04.png"><br><br>
+                    デザイン科展・デザイン科カフェ
+                    <br><img class="images" src="images/10-05.png"><br><br>
+                    茶道部 お点前の披露
+                    <br><img class="images" src="images/10-06.jpg"><br><br>
+                    材料研究 清水一冴プロダクション
+                    <br><img class="images" src="images/10-07.png"><br><br>
+                </p>
+            </div>
+            <div id="9F">
+                <h2>９階</h2>
+                <p class="imagep">
+                    E23 VS2-3
+                    <br><img class="images" src="images/11-01.png"><br><br>
+                    E22 倶楽部
+                    <br><img class="images" src="images/11-02.png"><br><br>
+                    E21 ラジコンレース
+                    <br><img class="images" src="images/11-03.png"><br><br>
+                    D1 ワークショップ
+                    <br><img class="images" src="images/11-04.png"><br><br>
+                    写真部 写真展
+                    <br><img class="images" src="images/11-05.png"><br><br>
+                    鉄道研究部
+                    <br><img class="images" src="images/11-06.png"><br><br>
+                    電気科展
+                    <br><img class="images" src="images/11-07.png"><br><br>
+                    クリエイション部
+                    <br><img class="images" src="images/11-08.png"><br><br>
+                    E31 総合ゲームセンター
+                    <br><img class="images" src="images/11-09.png"><br><br>
+                    電気研究同好会 電気工事、電子機械の展示
+                    <br><img class="images" src="images/11-10.png"><br><br>
+                    放送部 ステージ展示、Live放送
+                    <br><img class="images" src="images/11-11.png"><br><br>
+                </p>
+            </div>
+            <div id="10F">
+                <h2>１０階</h2>
+                <p class="imagep">
+                    ワンダーフォーゲル部
+                    <br><img class="images" src="images/12-01.png"><br><br>
+                    E32 謎解き
+                    <br><img class="images" src="images/12-02.png"><br><br>
+                    M11 キッキングスナイパー
+                    <br><img class="images" src="images/12-03.png"><br><br>
+                    神奈川総合高校 神奈川総合高校紹介
+                    <br><img class="images" src="images/12-04.png"><br><br>
+                    eスポーツ部 格ゲー体験会
+                    <br><img class="images" src="images/12-05.png"><br><br>
+                    アマチュア無線部 無線機やドローン等の展示・交信体験
+                    <br><img class="images" src="images/12-06.png"><br><br>
+                    神奈川総合高校 COWBOY'S HAUNTS
+                    <br><img class="images" src="images/12-07.png"><br><br>
+                </p>
+            </div>
         </div>
     </main>
     <footer>

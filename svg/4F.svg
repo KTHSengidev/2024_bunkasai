@@ -22,9 +22,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="7.5617906"
-     inkscape:cx="66.849246"
-     inkscape:cy="88.074378"
+     inkscape:zoom="3.7808953"
+     inkscape:cx="180.5128"
+     inkscape:cy="6.0832153"
      inkscape:window-width="2160"
      inkscape:window-height="1377"
      inkscape:window-x="-8"
@@ -410,9 +410,31 @@
     <text
        class="cls-1"
        id="text3991"
-       style="font-size:6.66667px;text-align:center;text-anchor:middle;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-       x="89.945816"
-       y="59.821041">神奈川県内専門高校PR展</text>
+       style="font-size:6.66667px;text-align:center;text-anchor:middle;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="67.324142"
+       y="55.662514"><tspan
+         sodipodi:role="line"
+         id="tspan810"
+         x="67.324142"
+         y="55.662514">工業基礎</tspan><tspan
+         sodipodi:role="line"
+         id="tspan812"
+         x="67.324142"
+         y="63.99585">実習室</tspan></text>
+    <text
+       class="cls-1"
+       id="text3991-6"
+       style="font-size:6.66667px;font-family:'BIZ UDPGothic', 'BIZ UDPゴシック', HiraginoSans-W7-83pv-RKSJ-H, 'Hiragino Sans';text-align:center;text-anchor:middle;fill:#0a0a0a;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="112.67448"
+       y="55.78751"><tspan
+         sodipodi:role="line"
+         id="tspan812-3"
+         x="112.67448"
+         y="55.78751">電子基礎</tspan><tspan
+         sodipodi:role="line"
+         x="112.67448"
+         y="64.12085"
+         id="tspan848">制御実習室</tspan></text>
     <text
        class="cls-1"
        transform="translate(208.035,36.888)"
