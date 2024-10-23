@@ -12,37 +12,6 @@
     <script type="text/javascript" src="js/leaflet.js"></script>
     <script type="text/javascript" src="js/imgViewer2.js"></script>
     <script>
-        $(function(){
-            $('input').change(function(){
-                var val = $(this).val();
-                if (val){
-                    var val = val.substr(0, 2);
-                    var selectFloorId = '#' + val;
-                    $('ul li').hide();
-                    $(selectFloorId).show();
-                    var $img = $(selectFloorId+"_img").imgViewer2(
-                        {
-                            onReady: function(){
-                                this.setZoom(2);
-                                this.setZoom(1);
-                            }
-                        }
-                    );
-                }
-            });
-        });
-        ;(function($){
-            $(window).on("load", function(){
-                var $img = $("#1F_img").imgViewer2(
-                    {
-                        onReady: function(){
-                            this.setZoom(2);
-                            this.setZoom(1);
-                        }
-                    }
-                );
-            });
-        })(jQuery);
         function clearText() {
             var textForm = document.getElementById("rnform");
             textForm.value = '';
@@ -68,6 +37,11 @@
         <small>&copy; 2024 神工校内マップ 108期生製作 v2.0</small></p>
     </footer>
     <script>
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
         var map = L.map('map', {
             crs: L.CRS.Simple,
             maxZoom: 1,
@@ -76,10 +50,10 @@
         var bounds = [[0,0], [2000,2000]];
         map.fitBounds(bounds);
 
-        L.control.layers({
+        var layers={
             "1F": L.imageOverlay("svg/1F.svg", bounds, {
                 attribution: "&copy; 令和6年度 文化祭実行委員会<br><a href='https://www.pen-kanagawa.ed.jp/kanagawa-th/'>神奈川県立神奈川工業高等学校</a>"
-            }).addTo(map),
+            }),
             "2F": L.imageOverlay("svg/2F.svg", bounds, {
                 attribution: "&copy; 令和6年度 文化祭実行委員会<br><a href='https://www.pen-kanagawa.ed.jp/kanagawa-th/'>神奈川県立神奈川工業高等学校</a>"
             }),
@@ -107,13 +81,16 @@
             "10F": L.imageOverlay("svg/10F.svg", bounds, {
                 attribution: "&copy; 令和6年度 文化祭実行委員会<br><a href='https://www.pen-kanagawa.ed.jp/kanagawa-th/'>神奈川県立神奈川工業高等学校</a>"
             })
-        }, null, {collapsed: false,}).addTo(map);
+        }
+        
+        var floor = getParameterByName('floor') || "1F";
+        if (layers[floor]) {
+            layers[floor].addTo(map);
+        }
+
+        L.control.layers(layers, null, {collapsed: false,}).addTo(map);
 
         map.zoomControl.setPosition("bottomright");
-
-        L.control.layers(null, overlayLayerControls, {collapsed: false}).addTo(map);
-
-        L.imageOverlay(image.url, imageBounds).addTo(map);
     </script>
 </body>
 </html>

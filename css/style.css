@@ -69,7 +69,8 @@ html {
 }
 
 a,a:visited {
-  color: #0071d1;/*カラーコードは任意*/
+  color: #000;
+  text-decoration:none;
 }
 
 .rn #room {
