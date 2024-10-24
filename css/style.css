@@ -73,6 +73,37 @@ a,a:visited {
   text-decoration: none;
 }
 
+#search-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#search-box {
+  padding: 8px;
+  width: 200px;
+}
+
+.result-item {
+  border: 2px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
 .rn #room {
   flex-grow: 1;
   background-color: lightgreen;
