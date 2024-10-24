@@ -22,6 +22,522 @@
                 );
             });
         })(jQuery);
+        // 団体データの配列（例）
+        const organizations = [
+            {
+                name: "DJ部",
+                description: "公演団体",
+                image: "01-03.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>工業戦隊メガボルト", 
+                description: "１階",
+                image: "01-04.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>マレーシアフェア",
+                description: "公演団体",
+                image: "01-07.png",
+                floor: "1F"
+            },
+            {
+                name: "吹奏楽部<br>吹奏楽部ステージ",
+                description: "公演団体",
+                image: "01-09.png",
+                floor: "2F"
+            },
+            {
+                name: "ダンス部<br>ダンス公演",
+                description: "公演団体",
+                image: "01-10.png",
+                floor: "2F"
+            },
+            {
+                name: "有志団体<br>マツケンサンバ2",
+                description: "公演団体",
+                image: "01-11.png",
+                floor: "2F"
+            },
+            {
+                name: "有志団体<br>一人でオドループ",
+                description: "公演団体",
+                image: "01-12.png",
+                floor: "2F"
+            },
+            {
+                name: "音楽部<br>演奏",
+                description: "公演団体",
+                image: "01-13.png",
+                floor: "2F"
+            },
+            {
+                name: "ローゼンボア",
+                description: "屋外団体",
+                image: "02-01.png",
+                floor: "1F"
+            },
+            {
+                name: "定時制4年生<br>はしびろこう",
+                description: "屋外団体",
+                image: "02-02.png",
+                floor: "1F"
+            },
+            {
+                name: "PTA<br>焼きナポリタン",
+                description: "屋外団体",
+                image: "02-03.png",
+                floor: "1F"
+            },
+            {
+                name: "A31<br>回転シーソー&うどん",
+                description: "屋外団体",
+                image: "02-04.png",
+                floor: "1F"
+            },
+            {
+                name: "A32<br>じゃがバタ　わたあめ",
+                description: "屋外団体",
+                image: "02-05.png",
+                floor: "1F"
+            },
+            {
+                name: "M31<br>焼きそば",
+                description: "屋外団体",
+                image: "02-06.png",
+                floor: "1F"
+            },
+            {
+                name: "E32<br>飲食",
+                description: "屋外団体",
+                image: "02-07.png",
+                floor: "1F"
+            },
+            {
+                name: "M32<br>ポップコーン　ホットドック　フランクフルト",
+                description: "屋外団体",
+                image: "02-08.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>必食！マレーシア料理ミーゴレン",
+                description: "屋外団体",
+                image: "02-09.png",
+                floor: "1F"
+            },
+            {
+                name: "E31<br>かつやのやきとり",
+                description: "屋外団体",
+                image: "02-10.png",
+                floor: "1F"
+            },
+            {
+                name: "A31<br>回転シーソー",
+                description: "屋外団体",
+                image: "02-11.png",
+                floor: "1F"
+            },
+            {
+                name: "A32<br>芝生スライダー",
+                description: "屋外団体",
+                image: "02-12.png",
+                floor: "1F"
+            },
+            {
+                name: "A21<br>メリーゴーランド",
+                description: "屋外団体",
+                image: "02-13.png",
+                floor: "1F"
+            },
+            {
+                name: "生徒会本部<br>スタンプラリー",
+                description: "１階",
+                image: "03-01.png",
+                floor: "1F"
+            },
+            {
+                name: "PTA<br>陶芸教室作品展・ハンドメイド販売",
+                description: "１階",
+                image: "03-02.png",
+                floor: "1F"
+            },
+            {
+                name: "たたら製鉄",
+                description: "１階",
+                image: "03-03.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>メガボルトSHOP",
+                description: "１階",
+                image: "03-04.png",
+                floor: "1F"
+            },
+            {
+                name: "保健委員会<br>体力王への道～体力王に俺はなる～",
+                description: "１階",
+                image: "03-05.png",
+                floor: "1F"
+            },
+            {
+                name: "E33<br>VR/AI体験",
+                description: "２階",
+                image: "04-01.png",
+                floor: "2F"
+            },
+            {
+                name: "ものづくり研究部<br>作品展示・販売＆コマ体験",
+                description: "３階",
+                image: "05-01.png",
+                floor: "3F"
+            },
+            {
+                name: "水球部<br>水球部招待試合",
+                description: "３階",
+                image: "05-02.png",
+                floor: "3F"
+            },
+            {
+                name: "ロボティクス部<br>レゴを用いたロボット製作体験",
+                description: "３階",
+                image: "05-03.png",
+                floor: "3F"
+            },
+            {
+                name: "図書委員会<br>和綴じ本販売と古本市",
+                description: "３階",
+                image: "05-04.png",
+                floor: "3F"
+            },
+            {
+                name: "M22<br>喫茶店＆フォトスポット",
+                description: "４階",
+                image: "06-01.png",
+                floor: "4F"
+            },
+            {
+                name: "M21<br>ゲームパーク",
+                description: "４階",
+                image: "06-02.png",
+                floor: "4F"
+            },
+            {
+                name: "M32<br>フォトスポット",
+                description: "４階",
+                image: "06-03.png",
+                floor: "4F"
+            },
+            {
+                name: "M31<br>ドライビングシュミレーター",
+                description: "４階",
+                image: "06-04.png",
+                floor: "4F"
+            },
+            {
+                name: "機械科展<br>ネームプレートと文策の販売、展示等",
+                description: "４階",
+                image: "06-05.png",
+                floor: "4F"
+            },
+            {
+                name: "定時制PTA<br>お茶を出す休憩所",
+                description: "５階",
+                image: "07-01.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制2年生<br>すごいふぉとすぽっと",
+                description: "５階",
+                image: "07-02.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制1年生<br>Trick of treat",
+                description: "５階",
+                image: "07-03.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制イラスト同好会・写真部<br>作品展示・写真作品デジタル展示",
+                description: "５階",
+                image: "07-04.png",
+                floor: "5F",
+                second: 'br><img class="images" src="images/07-05.png"'
+            },
+            {
+                name: "定時制3年生<br>きゅうり",
+                description: "５階",
+                image: "07-06.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制ライフル射撃部<br>ビームライフル射撃体験",
+                description: "５階",
+                image: "07-07.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制建築研究部<br>「小田原城」～新聞紙で作成～",
+                description: "５階",
+                image: "07-08.png",
+                floor: "5F"
+            },
+            {
+                name: "定時制機械科・建設科・電気科展<br>工業科展",
+                description: "５階",
+                image: "07-09.png",
+                floor: "5F"
+            },
+            {
+                name: "料理部<br>にぎりん喫茶",
+                description: "６階",
+                image: "08-01.png",
+                floor: "6F"
+            },
+            {
+                name: "E13<br>映画上映　飲食販売",
+                description: "６階",
+                image: "08-02.png",
+                floor: "6F"
+            },
+            {
+                name: "E12<br>昔のゲーム",
+                description: "６階",
+                image: "08-03.png",
+                floor: "6F"
+            },
+            {
+                name: "E11<br>縁日",
+                description: "６階",
+                image: "08-04.png",
+                floor: "6F"
+            },
+            {
+                name: "二渓会<br>大木理人アート展",
+                description: "６階",
+                image: "08-05.png",
+                floor: "6F"
+            },
+            {
+                name: "生徒会本部<br>Kスポーツ大会",
+                description: "６階",
+                image: "08-06.png",
+                floor: "6F"
+            },
+            {
+                name: "陶芸部・定時制陶芸部<br>作品展示",
+                description: "６階",
+                image: "08-07.png",
+                floor: "6F",
+                second: 'br><img class="images" src="images/08-08.png"'
+            },
+            {
+                name: "A22<br>ジェットコースター",
+                description: "７階",
+                image: "09-01.png",
+                floor: "7F"
+            },
+            {
+                name: "M12<br>射的",
+                description: "７階",
+                image: "09-02.png",
+                floor: "7F"
+            },
+            {
+                name: "A12<br>迷路体験",
+                description: "７階",
+                image: "09-03.png",
+                floor: "7F"
+            },
+            {
+                name: "A11<br>HIRANO STORY MANIA",
+                description: "７階",
+                image: "09-04.png",
+                floor: "7F"
+            },
+            {
+                name: "建設科展",
+                description: "７階",
+                image: "09-05.png",
+                floor: "7F"
+            },
+            {
+                name: "D2<br>Pontis Liber",
+                description: "８階",
+                image: "10-01.png",
+                floor: "8F"
+            },
+            {
+                name: "D3<br>デカDeカフェ",
+                description: "８階",
+                image: "10-02.png",
+                floor: "8F"
+            },
+            {
+                name: "イラスト・漫画同好会<br>部誌配布・グッズ販売",
+                description: "８階",
+                image: "10-03.png",
+                floor: "8F"
+            },
+            {
+                name: "美術部<br>校内販売",
+                description: "８階",
+                image: "10-04.png",
+                floor: "8F"
+            },
+            {
+                name: "デザイン科展・デザイン科カフェ",
+                description: "８階",
+                image: "10-05.png",
+                floor: "8F"
+            },
+            {
+                name: "茶道部<br>お点前の披露",
+                description: "８階",
+                image: "10-06.png",
+                floor: "8F"
+            },
+            {
+                name: "材料研究<br>清水一冴プロダクション",
+                description: "８階",
+                image: "10-07.png",
+                floor: "8F"
+            },
+            {
+                name: "E23<br>VS2-3",
+                description: "９階",
+                image: "11-01.png",
+                floor: "9F"
+            },
+            {
+                name: "E22<br>倶楽部",
+                description: "９階",
+                image: "11-02.png",
+                floor: "9F"
+            },
+            {
+                name: "E21<br>ラジコンレース",
+                description: "９階",
+                image: "11-03.png",
+                floor: "9F"
+            },
+            {
+                name: "D1<br>ワークショップ",
+                description: "９階",
+                image: "11-04.png",
+                floor: "9F"
+            },
+            {
+                name: "写真部<br>写真展",
+                description: "９階",
+                image: "11-05.png",
+                floor: "9F"
+            },
+            {
+                name: "鉄道研究部",
+                description: "９階",
+                image: "11-06.png",
+                floor: "9F"
+            },
+            {
+                name: "電気科展",
+                description: "９階",
+                image: "11-07.png",
+                floor: "9F"
+            },
+            {
+                name: "クリエイション部",
+                description: "９階",
+                image: "11-08.png",
+                floor: "9F"
+            },
+            {
+                name: "E31<br>総合ゲームセンター",
+                description: "９階",
+                image: "11-09.png",
+                floor: "9F"
+            },
+            {
+                name: "電気研究同好会<br>電気工事、電子機械の展示",
+                description: "９階",
+                image: "11-10.png",
+                floor: "9F"
+            },
+            {
+                name: "放送部<br>ステージ展示、Live放送",
+                description: "９階",
+                image: "11-11.png",
+                floor: "9F"
+            },
+            {
+                name: "ワンダーフォーゲル部",
+                description: "１０階",
+                image: "12-01.png",
+                floor: "10F"
+            },
+            {
+                name: "E32<br>謎解き",
+                description: "１０階",
+                image: "12-02.png",
+                floor: "10F"
+            },
+            {
+                name: "M11<br>キッキングスナイパー",
+                description: "１０階",
+                image: "12-03.png",
+                floor: "10F"
+            },
+            {
+                name: "神奈川総合高校<br>神奈川総合高校紹介",
+                description: "１０階",
+                image: "12-04.png",
+                floor: "10F"
+            },
+            {
+                name: "eスポーツ部<br>格ゲー体験会",
+                description: "１０階",
+                image: "12-05.png",
+                floor: "10F"
+            },
+            {
+                name: "アマチュア無線部<br>無線機やドローン等の展示・交信体験",
+                description: "１０階",
+                image: "12-06.png",
+                floor: "10F"
+            },
+            {
+                name: "神奈川総合高校 30H<br>COWBOY'S HAUNTS",
+                description: "１０階",
+                image: "12-07.png",
+                floor: "10F"
+            }
+        ];
+    
+        function search() {
+            const keyword = document.getElementById("search-box").value.toLowerCase();
+            
+            const results = organizations.filter(org => 
+                org.name.toLowerCase().includes(keyword) || org.description.toLowerCase().includes(keyword)
+            );
+    
+            const resultsContainer = document.getElementById("search-results");
+            resultsContainer.innerHTML = "";
+    
+            if (results.length === 0) {
+                resultsContainer.innerHTML = "<p>該当する団体が見つかりませんでした。</p>";
+            } else {
+                results.forEach(org => {
+                    resultsContainer.innerHTML += `
+                        <div class="result-item">
+                            <h2>${org.description}</h2>
+                            <a href="index.html?floor=${org.floor}">${org.name}
+                            <br><img class="images" src="images/${org.image}"><${org.second}></a>
+                        </div>
+                    `;
+                });
+            }
+        }
     </script>
 </head>
 <body class="fl">
@@ -52,7 +568,13 @@
             </div>
         </div>
         <br><p>画像をクリックすると<br>その団体のある階のフロアマップにジャンプします。</p>
+        <!-- 検索ボックスを追加 -->
+        <div id="search-container">
+            <input type="text" id="search-box" placeholder="団体名で検索（例：M11）">
+            <button onclick="search()">検索</button>
+        </div>
         <div class="text">
+            <div id="search-results"></div>
             <div id="kouen">
                 <h2>公演団体</h2>
                 <p class="imagep">
